@@ -1,0 +1,505 @@
+body {
+  font-family: "Poppins", serif;
+}
+
+header {
+  height: 18vh;
+}
+
+header .header__container {
+  text-align: center; 
+  background-color: black;
+  padding: 24px;
+  height: 100%;
+}
+
+header .header__container .header__title {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+header .header__container .header__subtitle {
+  font-size: 1.125rem;
+  color: #fff;
+}
+
+header .header__nav {
+  border-top: 1px solid #EEC965;
+  border-bottom: 1px solid #EEC965;
+  margin: 20px 0;
+}
+
+header .header__nav ul {
+  display: flex;
+  padding: 20px 0;
+  justify-content: space-around;
+}
+
+header .header__nav ul li a{
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  position: relative;
+}
+
+
+header .header__nav ul li a::after {
+  content: "";
+  background-image: url(../img/navigation-zelda.svg);
+  height: 13px;
+  width: 15px;
+  position: absolute;
+  top: 25%;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;  
+  transform: rotate(180deg);
+}
+
+
+header .header__nav ul li a::before {
+  content: "";
+  background-image: url(../img/navigation-zelda.svg);
+  height: 13px;
+  width: 15px;
+  position: absolute;
+  top: 25%;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;  
+}
+
+header .header__nav ul li a::before {
+  left: 110%;
+}
+
+header .header__nav ul li a::after {
+  right: 110%;
+}
+
+header .header__nav ul li a:hover::before,
+header .header__nav ul li a:hover::after {
+  opacity: 1;  
+  transform: translateX(2px);  
+}
+
+header .header__nav ul li a:hover::after {
+  transform: translateX(-2px) rotate(180deg); 
+}
+
+#intro {
+  height: 82vh;
+  background-image: url(../img/zelda-portal-hero-small.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#intro .intro__banner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+}
+
+#intro .intro__banner .intro__title {
+  font-size: 32px;
+}
+
+#intro .intro__banner .intro__title::before {
+  content: "";
+  background-image: url(../img/logo-loz.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 350px;
+  height: 150px;
+  position: absolute;
+  top: 10%;
+}
+
+#intro .intro__banner .intro__text {
+  font-size: 24px;
+  padding: 10px 0;
+}
+
+#intro .intro__banner .intro__button {
+  margin: 20px 0;
+  color: #000;
+  padding: 5px 10px;
+  font-size: 24px;
+  text-decoration: none;
+  border: 2px solid #000;
+  transition: all .5s ease;
+}
+
+#intro .intro__banner .intro__button:hover {
+  background-color: black;
+  color: #fff;
+}
+
+#about {
+  height: 100vh;
+  background-image: url(../img/the-legend-of-zelda-triforce-video-games-minimalism-wallpaper-preview.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 10px;
+}
+
+#about .section__content {
+  display: flex;
+  height: 80%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#about .section__content .section__title {
+  font-size: 32px;
+  color: #fff;
+  padding: 10px 0;
+}
+
+#about .section__content .section__text {
+  font-size: 24px;
+  color: #fff;
+}
+
+#about .section__content .about__grid {
+  display: flex;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+#about .section__content .about__item {
+  width: 250px;
+  height: 100px;
+  border: 2px solid #fff;
+  text-align: center;
+  padding-top: 30px;
+  color: #fff;
+  background-color: black;
+  transition: transform .5s ease;
+}
+
+#about .section__content .about__item:hover {
+  transform: scale(1.2);
+}
+
+#gallery {
+  height: 100vh;
+  margin-top: 10px;
+  background-image: url(../img/fundo-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 30px;
+}
+
+#gallery .section__title {
+  text-align: center;
+  font-size: 32px;
+  color: #b8860b;
+  font-weight: 700;
+}
+
+#gallery .gallery__grid {
+  display: flex;
+  max-width: 980px;
+  margin: 0 auto;
+  gap: 100px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  justify-content: center;
+}
+
+#gallery .gallery__grid .gallery__item .gallery__caption {
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+#gallery .gallery__grid .gallery__item .btn-more {
+  margin: 0 auto;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: none;
+  height: 30px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+#gallery .gallery__grid .gallery__item .btn-more:hover {
+  background-color: rgba(0, 0, 0, 0.9); /* Cor de fundo mais escura */
+  transform: scale(1.1); /* Aumenta o tamanho do botão ligeiramente */
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+#services {
+  height: 120vh;
+  margin-top: 10px;
+  background-image: url(../img/fundo-3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 30px;
+}
+
+#services .section__content .section__title{
+  text-align: center;
+  font-size: 32px;
+  color: #b8860b;
+  font-weight: 700;
+}
+
+#services .section__content .services__list {
+  display: flex;
+  max-width: 1580px;
+  margin: 0 auto;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  justify-content: center;
+  padding: 32px;
+}
+
+#services .section__content .service__item {
+  width: 400px;
+  height: 270px;
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 10px;
+  border: 2px solid #EEC965;
+  transition: transform .2s ease;
+}
+
+#services .section__content .service__item:hover {
+  transform: scale(1.1);
+}
+
+#services .section__content .service__item .service__title {
+  font-size: 18px;
+}
+
+#services .section__content .service__item .service__description {
+  font-size: 14px;
+} 
+
+#services .section__content .service__item:nth-child(1):before {
+  content: "";
+  background-image: url(../img/1-echoes-of-wisdom.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 210px;
+  position: absolute;
+  top: 0%;
+}
+
+#services .section__content .service__item:nth-child(2):before {
+  content: "";
+  background-image: url(../img/2-tears-of-the-kingdom.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 210px;
+  position: absolute;
+  top: 0%;
+}
+
+#services .section__content .service__item:nth-child(3):before {
+  content: "";
+  background-image: url(../img/3-skyward-sword.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 210px;
+  position: absolute;
+  top: 0%;
+}
+
+#services .section__content .service__item:nth-child(4):before {
+  content: "";
+  background-image: url(../img/4-breath-of-the-wild.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 210px;
+  position: absolute;
+  top: 0%;
+}
+
+#services .section__content .service__item:nth-child(5):before {
+  content: "";
+  background-image: url(../img/5-links-awakening.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 210px;
+  position: absolute;
+  top: 0%;
+}
+
+#services .section__content .service__item:nth-child(6):before {
+  content: "";
+  background-image: url(../img/6-lego-great-deku-tree.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 210px;
+  position: absolute;
+  top: 0%;
+}
+
+#services .section__content .service__item:nth-child(7):before {
+  content: "";
+  background-image: url(../img/1-echoes-of-wisdom.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 210px;
+  position: absolute;
+  top: 0%;
+}
+
+#services .section__content .service__item:nth-child(8):before {
+  content: "";
+  background-image: url(../img/4-breath-of-the-wild.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 210px;
+  position: absolute;
+  top: 0%;
+}
+
+#news {
+  height: 120vh;
+  margin-top: 10px;
+  background-image: url(../img/fundo-4.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 30px;
+}
+
+#news .section__title {
+  color: #b8860b;
+  font-size: 32px;
+  text-align: center;
+  font-weight: 700;
+}
+
+#news .news__item {
+  max-width: 980px;
+  margin: 20px auto;
+  color: #fff;
+}
+
+#news .news__item .news__img {
+  width:250px;
+}
+
+#news .news__item .btn-more {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 0;
+  padding: 12px;
+  margin-top: 8px;  
+  color: #fff;
+  cursor: pointer;
+}
+
+
+#contact{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #0d3b66, #055e9e);
+  padding: 40px;
+  color: #f0e68c;
+  border: 2px solid #f0e68c;
+  border-radius: 15px;
+}
+
+#contact .section__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+#contact .section__title {
+  font-size: 32px;
+  color: #b8860b;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+#contact .contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  
+}
+
+#contact .contact__form .form__group .form__label {
+  display: block;
+  margin: 7px 0;
+}
+
+#contact .contact__form .form__group .form__input{
+  max-width: 400px;
+  height: 40px;
+}
+
+#contact .contact__form .form__button {
+  width: 300px;
+  height: 40px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 0;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 16px;
+}
+
+
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #222;
+  color: #f8f8f2;
+  padding: 15px;
+  border-top: 5px solid #b8860b;
+  background-image: url(https://media.istockphoto.com/id/1221901202/vector/gangster-mafia-background.jpg);
+  background-size: cover;
+}
+
+footer a {
+  color: #ffd700;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+
